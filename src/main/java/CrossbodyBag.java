@@ -30,3 +30,28 @@
  *
  *       See the tests in test/CrossBodyBagTest.java for examples.
  */
+
+public class CrossbodyBag extends Bag{
+    private int numberofstraps;
+    public CrossbodyBag(String color, int capacity, int noOfStraps){
+        super(color, capacity);
+        this.numberofstraps = noOfStraps;
+    }
+
+    public int getNumberOfStraps(){
+        return numberofstraps;
+    }
+
+    @Override
+    public void enhance(){
+        super.increaseCapacity(2);
+    }
+
+    @Override
+    public String toString(){
+        return super.getColor() + " Crossbody Bag with " + this.numberofstraps
+        + " Straps" + super.getNumberOfContents() + " / " +
+                super.getCapacity() + ")";
+    }
+
+}
